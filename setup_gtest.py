@@ -2,6 +2,7 @@
 
 from gtest_setup import GTestSetup
 import argparse
+import time
 
 
 def main():
@@ -11,6 +12,7 @@ def main():
     parser.add_argument("-p", "--path", help="full path to project")
     args = parser.parse_args()
     GTestSetup(project=args.project, path=args.path).Setup()
+    print("=from_unix_epoch(" + str(time.time()) + ")")
 
 
 if __name__ == '__main__':
